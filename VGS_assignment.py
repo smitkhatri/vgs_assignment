@@ -49,7 +49,8 @@ def endpoint_One():
 
 @app.route("/send", methods=['POST'])
 def endpoint_two():
-	
+	print(request.data)
+	print(type(request.data))
 	data_recieved = request.data.decode("utf-8")
 	print(data_recieved)
 	tokenized_value = json.loads(data_recieved)
